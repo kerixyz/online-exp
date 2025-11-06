@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { Community, AgentType, AgentConfig, SimulationResults } from '../types';
 
-const API_BASE = '/api';
+// Use environment variable for API URL, fallback to proxy in development
+const API_BASE = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : '/api';
 
 export const api = {
   async healthCheck() {

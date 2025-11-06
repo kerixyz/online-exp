@@ -13,7 +13,15 @@ from simulation.community_analyzer import CommunitySimulator
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+
+# CORS configuration - allows requests from frontend
+# In production, ALLOWED_ORIGINS should be set to your Vercel domain
+allowed_origins = os.getenv('ALLOWED_ORIGINS', '*')
+if allowed_origins == '*':
+    CORS(app)
+else:
+    origins_list = [origin.strip() for origin in allowed_origins.split(',')]
+    CORS(app, origins=origins_list)
 
 # Configuration
 MODE = os.getenv('MODE', 'offline')

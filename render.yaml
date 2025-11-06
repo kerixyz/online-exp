@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-community-backend
+    env: python
+    region: oregon
+    plan: free
+    branch: claude/create-qa-website-011CUqwzKgQf7KMy8k3evGhc
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && python app.py"
+    envVars:
+      - key: MODE
+        value: offline
+      - key: FLASK_PORT
+        value: 5000
+      - key: PYTHON_VERSION
+        value: 3.11.0
