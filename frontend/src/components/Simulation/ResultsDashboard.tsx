@@ -46,9 +46,23 @@ export default function ResultsDashboard({ results }: ResultsDashboardProps) {
           marginBottom: '2rem',
           border: '1px solid #000000'
         }}>
-          <h3 style={{ color: 'white', marginBottom: '1rem' }}>Impact Summary</h3>
+          <h3 style={{ color: 'white', marginBottom: '1rem' }}>What Changed?</h3>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
             {results.impact.summary}
+          </p>
+        </div>
+
+        <div style={{
+          padding: '1.5rem',
+          border: '1px solid #000000',
+          marginBottom: '2rem'
+        }}>
+          <h3 style={{ marginBottom: '1rem' }}>Your Evaluation</h3>
+          <p style={{ marginBottom: '1rem', fontWeight: 300 }}>
+            Based on these results, how would you feel about this AI agent in your community?
+          </p>
+          <p style={{ fontWeight: 300, fontSize: '0.9rem', opacity: 0.7 }}>
+            (Future feature: Submit your feedback to help research)
           </p>
         </div>
 

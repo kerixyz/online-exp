@@ -13,9 +13,9 @@ export default function SimulationPage() {
   return (
     <div className="container">
       <div className="card" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Interactive Simulation Platform</h1>
+        <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Simulate AI Agents</h1>
         <p style={{ opacity: 0.7 }}>
-          Configure AI agents and analyze their impact on community dynamics
+          See how different AI agents might change your community
         </p>
       </div>
 
