@@ -7,7 +7,7 @@ interface AgentConfigProps {
   currentConfig: AgentConfigType | null;
 }
 
-export default function AgentConfig({ onConfigChange, currentConfig }: AgentConfigProps) {
+export default function AgentConfig({ onConfigChange }: AgentConfigProps) {
   const [agentTypes, setAgentTypes] = useState<AgentType[]>([]);
   const [selectedType, setSelectedType] = useState<string>('');
   const [config, setConfig] = useState<any>({});
