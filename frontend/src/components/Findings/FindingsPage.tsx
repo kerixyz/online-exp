@@ -63,7 +63,7 @@ export default function FindingsPage() {
           </p>
           <ul style={{ paddingLeft: '2rem', lineHeight: '1.8' }}>
             <li>
-              Communities with higher baseline clustering (>0.4) show greater resilience to
+              Communities with higher baseline clustering ({'>'}0.4) show greater resilience to
               disruptive dynamics
             </li>
             <li>
