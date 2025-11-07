@@ -39,8 +39,8 @@ export default function MetricsCharts({ results }: MetricsChartsProps) {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="baseline" fill="#667eea" name="Baseline" />
-          <Bar dataKey="intervention" fill="#764ba2" name="After Intervention" />
+          <Bar dataKey="baseline" fill="#ffffff" stroke="#000000" name="Baseline" />
+          <Bar dataKey="intervention" fill="#000000" name="After Intervention" />
         </BarChart>
       </ResponsiveContainer>
 
@@ -96,24 +96,23 @@ interface MetricDetailProps {
 
 function MetricDetail({ label, baseline, intervention, decimals = 0 }: MetricDetailProps) {
   const change = baseline !== 0 ? ((intervention - baseline) / baseline) * 100 : 0;
-  const changeColor = change > 0 ? '#22c55e' : change < 0 ? '#ef4444' : '#888';
+  const changeColor = '#000000';
 
   return (
     <div style={{
       padding: '1rem',
-      background: '#f9f9f9',
-      borderRadius: '8px',
-      border: '1px solid #e0e0e0'
+      background: '#ffffff',
+      border: '1px solid #000000'
     }}>
-      <div style={{ fontSize: '0.875rem', color: '#888', marginBottom: '0.25rem' }}>
+      <div style={{ fontSize: '0.875rem', marginBottom: '0.25rem', opacity: 0.7 }}>
         {label}
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <div>
-          <span style={{ fontSize: '0.875rem', color: '#888' }}>
+          <span style={{ fontSize: '0.875rem', opacity: 0.7 }}>
             {baseline.toFixed(decimals)}
           </span>
-          <span style={{ margin: '0 0.5rem', color: '#ccc' }}>→</span>
+          <span style={{ margin: '0 0.5rem', opacity: 0.3 }}>→</span>
           <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>
             {intervention.toFixed(decimals)}
           </span>

@@ -41,10 +41,10 @@ export default function ResultsDashboard({ results }: ResultsDashboardProps) {
 
         <div style={{
           padding: '1.5rem',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          borderRadius: '12px',
-          color: 'white',
-          marginBottom: '2rem'
+          background: '#000000',
+          color: '#ffffff',
+          marginBottom: '2rem',
+          border: '1px solid #000000'
         }}>
           <h3 style={{ color: 'white', marginBottom: '1rem' }}>Impact Summary</h3>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
@@ -92,13 +92,13 @@ export default function ResultsDashboard({ results }: ResultsDashboardProps) {
         <h3>Network Structure Comparison</h3>
         <div className="grid grid-2">
           <div>
-            <h4 style={{ textAlign: 'center', marginBottom: '1rem', color: '#667eea' }}>
+            <h4 style={{ textAlign: 'center', marginBottom: '1rem' }}>
               Baseline Network
             </h4>
             <NetworkGraph data={results.baseline.network_viz} />
           </div>
           <div>
-            <h4 style={{ textAlign: 'center', marginBottom: '1rem', color: '#764ba2' }}>
+            <h4 style={{ textAlign: 'center', marginBottom: '1rem' }}>
               After AI Intervention
             </h4>
             <NetworkGraph data={results.intervention.network_viz} />
@@ -113,7 +113,7 @@ export default function ResultsDashboard({ results }: ResultsDashboardProps) {
 
       <div className="card">
         <h3>Intervention Details</h3>
-        <p style={{ marginBottom: '1rem', color: '#666' }}>
+        <p style={{ marginBottom: '1rem' }}>
           Agent Type: <strong>{results.config.type}</strong>
         </p>
 

@@ -49,7 +49,7 @@ export default function SimulationRunner({ communityId, agentConfig, onResults }
       <h2>Step 3: Run Simulation</h2>
 
       {!canRun && (
-        <p style={{ color: '#888', marginBottom: '1rem' }}>
+        <p style={{ marginBottom: '1rem', opacity: 0.7 }}>
           Please select a community and configure an agent to run the simulation.
         </p>
       )}
@@ -66,18 +66,18 @@ export default function SimulationRunner({ communityId, agentConfig, onResults }
           <div style={{
             width: '100%',
             height: '20px',
-            background: '#e0e0e0',
-            borderRadius: '10px',
+            background: '#ffffff',
+            border: '1px solid #000000',
             overflow: 'hidden'
           }}>
             <div style={{
               width: `${progress}%`,
               height: '100%',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: '#000000',
               transition: 'width 0.3s'
             }} />
           </div>
-          <p style={{ fontSize: '0.9rem', color: '#888', marginTop: '0.5rem' }}>
+          <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', opacity: 0.7 }}>
             {progress}% complete
           </p>
         </div>
@@ -86,8 +86,8 @@ export default function SimulationRunner({ communityId, agentConfig, onResults }
       {agentConfig && (
         <div style={{
           padding: '1rem',
-          background: '#f8f9ff',
-          borderRadius: '8px',
+          background: '#ffffff',
+          border: '1px solid #000000',
           marginBottom: '1.5rem'
         }}>
           <h4 style={{ marginBottom: '0.5rem' }}>Current Configuration:</h4>
@@ -108,7 +108,7 @@ export default function SimulationRunner({ communityId, agentConfig, onResults }
         {running ? 'Running Simulation...' : 'Run Simulation'}
       </button>
 
-      <p style={{ fontSize: '0.9rem', color: '#888', marginTop: '1rem' }}>
+      <p style={{ fontSize: '0.9rem', marginTop: '1rem', opacity: 0.7 }}>
         The simulation will analyze community interactions and model the impact of your configured AI agent.
       </p>
     </div>

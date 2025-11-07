@@ -4,7 +4,7 @@ export default function Landing() {
   return (
     <div className="container">
       <div className="card" style={{ textAlign: 'center', maxWidth: '800px', margin: '2rem auto' }}>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#667eea' }}>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
           AI-Mediated Community Dynamics Platform
         </h1>
         <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
@@ -15,7 +15,7 @@ export default function Landing() {
           <h3>Research Focus</h3>
           <div style={{ textAlign: 'left', marginTop: '1rem' }}>
             <div style={{ marginBottom: '1.5rem' }}>
-              <h4 style={{ color: '#667eea', marginBottom: '0.5rem' }}>
+              <h4 style={{ marginBottom: '0.5rem' }}>
                 Study 1: Mapping AI-Mediated Community Dynamics
               </h4>
               <p>
@@ -25,7 +25,7 @@ export default function Landing() {
             </div>
 
             <div style={{ marginBottom: '1.5rem' }}>
-              <h4 style={{ color: '#667eea', marginBottom: '0.5rem' }}>
+              <h4 style={{ marginBottom: '0.5rem' }}>
                 Study 2: Modeling Power, Equity, and Influence
               </h4>
               <p>
@@ -35,7 +35,7 @@ export default function Landing() {
             </div>
 
             <div style={{ marginBottom: '1.5rem' }}>
-              <h4 style={{ color: '#667eea', marginBottom: '0.5rem' }}>
+              <h4 style={{ marginBottom: '0.5rem' }}>
                 Study 3: Comparative Analysis Across Platforms
               </h4>
               <p>

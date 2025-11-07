@@ -32,16 +32,13 @@ export default function NetworkGraph({ data }: NetworkGraphProps) {
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide().radius(20));
 
-    // Color scale for communities
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-
     // Draw links
     const link = svg.append('g')
       .selectAll('line')
       .data(data.links)
       .join('line')
-      .attr('stroke', '#999')
-      .attr('stroke-opacity', 0.6)
+      .attr('stroke', '#000000')
+      .attr('stroke-opacity', 0.2)
       .attr('stroke-width', (d: any) => Math.sqrt(d.weight));
 
     // Draw nodes
@@ -50,9 +47,9 @@ export default function NetworkGraph({ data }: NetworkGraphProps) {
       .data(data.nodes)
       .join('circle')
       .attr('r', (d: any) => 3 + d.pagerank * 30)
-      .attr('fill', (d: any) => colorScale(d.community.toString()))
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.5)
+      .attr('fill', '#ffffff')
+      .attr('stroke', '#000000')
+      .attr('stroke-width', 2)
       .call(drag(simulation) as any);
 
     // Add tooltips

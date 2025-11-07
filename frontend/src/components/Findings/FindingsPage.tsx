@@ -3,12 +3,12 @@ export default function FindingsPage() {
     <div className="container">
       <div className="card">
         <h1 style={{ marginBottom: '1rem' }}>Research Findings</h1>
-        <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '2rem' }}>
+        <p style={{ fontSize: '1.1rem', marginBottom: '2rem', fontWeight: 300 }}>
           Key insights from simulations of AI-mediated community dynamics
         </p>
 
         <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ color: '#667eea', marginBottom: '1rem' }}>
+          <h2 style={{ marginBottom: '1rem' }}>
             Study 1: Mapping AI-Mediated Community Dynamics
           </h2>
           <p style={{ marginBottom: '1rem' }}>
@@ -32,7 +32,7 @@ export default function FindingsPage() {
         </section>
 
         <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ color: '#667eea', marginBottom: '1rem' }}>
+          <h2 style={{ marginBottom: '1rem' }}>
             Study 2: Modeling Power, Equity, and Influence
           </h2>
           <p style={{ marginBottom: '1rem' }}>
@@ -55,7 +55,7 @@ export default function FindingsPage() {
         </section>
 
         <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ color: '#667eea', marginBottom: '1rem' }}>
+          <h2 style={{ marginBottom: '1rem' }}>
             Study 3: Comparative Analysis Across Platforms
           </h2>
           <p style={{ marginBottom: '1rem' }}>
@@ -78,14 +78,14 @@ export default function FindingsPage() {
         </section>
 
         <section>
-          <h2 style={{ color: '#667eea', marginBottom: '1rem' }}>
+          <h2 style={{ marginBottom: '1rem' }}>
             Key Takeaways
           </h2>
           <div style={{
             padding: '1.5rem',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '12px',
-            color: 'white'
+            background: '#000000',
+            color: '#ffffff',
+            border: '1px solid #000000'
           }}>
             <ul style={{ paddingLeft: '2rem', lineHeight: '2', margin: 0 }}>
               <li>AI agents have measurable effects on community structure and equity metrics</li>

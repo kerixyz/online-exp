@@ -58,7 +58,7 @@ export default function AgentConfig({ onConfigChange }: AgentConfigProps) {
   return (
     <div className="card">
       <h2>Step 2: Configure AI Agent</h2>
-      <p style={{ marginBottom: '1.5rem', color: '#666' }}>
+      <p style={{ marginBottom: '1.5rem' }}>
         Select an AI agent type and configure its behavior parameters.
       </p>
 
@@ -82,11 +82,11 @@ export default function AgentConfig({ onConfigChange }: AgentConfigProps) {
         <>
           <div style={{
             padding: '1rem',
-            background: '#f8f9ff',
-            borderRadius: '8px',
+            background: '#ffffff',
+            border: '1px solid #000000',
             marginBottom: '1.5rem'
           }}>
-            <p style={{ color: '#667eea', fontWeight: 500 }}>
+            <p style={{ fontWeight: 400 }}>
               {selectedAgentType.description}
             </p>
           </div>

@@ -40,7 +40,7 @@ export default function CommunitySelector({ onSelect, selectedCommunity }: Commu
   return (
     <div className="card">
       <h2>Step 1: Select Community</h2>
-      <p style={{ marginBottom: '1.5rem', color: '#666' }}>
+      <p style={{ marginBottom: '1.5rem' }}>
         Choose a community to analyze. Currently running in offline mode with sample data.
       </p>
 
@@ -51,16 +51,16 @@ export default function CommunitySelector({ onSelect, selectedCommunity }: Commu
             onClick={() => onSelect(community.id)}
             style={{
               padding: '1.5rem',
-              border: selectedCommunity === community.id ? '3px solid #667eea' : '2px solid #e0e0e0',
-              borderRadius: '8px',
+              border: selectedCommunity === community.id ? '2px solid #000000' : '1px solid #000000',
               cursor: 'pointer',
-              transition: 'all 0.3s',
-              backgroundColor: selectedCommunity === community.id ? '#f8f9ff' : 'white'
+              transition: 'all 0.2s',
+              backgroundColor: selectedCommunity === community.id ? '#000000' : '#ffffff',
+              color: selectedCommunity === community.id ? '#ffffff' : '#000000'
             }}
           >
             <h3 style={{ marginBottom: '0.5rem' }}>{community.name}</h3>
             <p style={{ marginBottom: '0.5rem' }}>{community.description}</p>
-            <div style={{ display: 'flex', gap: '2rem', color: '#888', fontSize: '0.9rem' }}>
+            <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', opacity: 0.7 }}>
               <span>{community.members.toLocaleString()} members</span>
               <span>{community.num_posts} posts analyzed</span>
             </div>
