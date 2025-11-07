@@ -6,8 +6,25 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import os
+import numpy as np
 from dotenv import load_dotenv
 from simulation.community_analyzer import CommunitySimulator
+
+
+def convert_numpy_types(obj):
+    """Recursively convert NumPy types to Python native types"""
+    if isinstance(obj, dict):
+        return {key: convert_numpy_types(value) for key, value in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_numpy_types(item) for item in obj]
+    elif isinstance(obj, (np.integer, np.int64)):
+        return int(obj)
+    elif isinstance(obj, (np.floating, np.float64)):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    else:
+        return obj
 
 # Load environment variables
 load_dotenv()
@@ -120,6 +137,9 @@ def run_simulation():
         # Run simulation
         simulator = CommunitySimulator(community_data, agent_config)
         results = simulator.simulate(num_steps)
+
+        # Convert NumPy types to Python native types for JSON serialization
+        results = convert_numpy_types(results)
 
         return jsonify(results)
 
